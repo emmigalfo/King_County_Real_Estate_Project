@@ -186,7 +186,7 @@ __Description:__ \
 Quality of view from house
 Includes views of Mt. Rainier, Olympics, Cascades, Territorial, Seattle Skyline, Puget Sound, Lake Washington, Lake Sammamish, small lake / river / creek, and other
 
-> __View Mean Prices from Highest to Lowest:__ \
+> __View Mean Prices from Highest to Lowest:__ \ 
 Excellent-    2.994147e+06 \
 Fair-         1.742069e+06 \
 Good-         1.736416e+06 \
@@ -202,8 +202,54 @@ The model is significant overall. The model explains about 50% of the variance i
 
 The constant and most of the predictors are significant at an alpha level of 0.05. 
 
+*Adding the categorical data increased the R-squared value from ~39% to ~50%! 
+This is definitely a step in the right direction.* 
+
 ## Fourth Model: Remove Outliers in Price
 
-*Adding the categorical data increased the R-squared value from ~39% to ~50%! 
-This is definitely a step in the right direction.  
-Outliers can throw off our data. We should look to see if there are any outliers, and then remove them to help improve the model.* 
+Outliers can throw off our data. When looking at data that lies outside of 3 standard deviations, I found and removed 437 outliers. 
+
+![Linear Regression model 4](./Photos/Model_4_results.png)
+##### Interpretation
+The model is significant overall. The model explains about 51% of the variance in price. 
+
+The constant and most of the predictors are significant at an alpha level of 0.05. 
+
+*Removing the outliers increased the R-squared value a couple percentage points. Now lets clean up the model by dropping the columns that are not significant.*
+
+## Final Model
+
+To have a more useful model we can drop the columns that are not significant. However, let's keep the column "grade_9 Better", because this is a useful column for our interpretation. Also, after columns are dropped, it's possible the "grade_9 Better" column will become signficant. 
+
+![Linear Regression model 5](./Photos/Model_5_results.png)
+##### Interpretation
+The model is significant overall. The model explains about 51% of the variance in price. 
+
+The constant and all but one of the predictors are significant at an alpha level of 0.05. 
+
+*Dropping the insignifant columns did not affect the R-squared score. Also, the predictor, grade 9, is now significant and can be used in the interpretations.* 
+
+### Model Error
+The mean absolute error for this model is 301,199. 
+*For housing prices, an error of 301k seems like a lot. Remember that the average house is 1.1 million USD. 
+This error shows the limitation of using this model to make accurate predictions.* 
+
+## Results
+__Results and Interpretation:__
+* The final model explains about 51% of the variance in price. 
+* The model overall is significant at an alpha level of 0.05. The constant and all predictors except fair condition are significant. 
+* For every square foot of living space the couple can expect to add 237 USD all else constant. 
+* For each bedroom the price goes down about 13K USD all else constant. 
+* For every bathroom the price increases about 17K USD all else constant. 
+* When compared to a grade of 1, increasing the grade to 7-10, decreases the cost of the house. This seems off. However, when comparing the coefficents of grades 7-10, the model shows that the house price would increase in the hundreds of thousands with each increase in grade. The increase in price with the increase in grade is expected. Going from a good to a better grade house, the price increase is about 306K USD all else constant. Going from a better to a very good grade house, the price increase is an additional 329K USD all else constant. 
+* For a house in good condition, the price will go up 72K USD compared to a house in poor condition all else constant. A house in very good condition will be about 156K USD more than a house in poor condition all else constant. 
+* For a house with a fair view, the price goes up 222K, for an average view the price will go up about 121K, for a good view the price goes up about 164K, and for an excellent view the price will go up 479K USD compared to no view all else constant. 
+
+## Conclusions
+
+According to the model, the real estate agent should help the couple look for a house with more bedrooms and fewer bathrooms. Depending on what they are comfortable with, a lower grade house in better condition could save more money than a higher grade house. Views can be expensive, but going for a good view is only a little more in cost than an average view and a lot cheaper than an excellent view. Of course, this is only the trend the model is seeing and the model is only explaining about 51% of the variation in price. Given that the model has a relatively high mean absolute error, 301K, the model should only be used as a loose guide to help the couple with their expectations on home prices. 
+
+Next steps should be to look at other variables such as zipcodes to see how they affect housing prices.  Ideally, an increase in model accuracy is needed before the model can produce solid recommendations. 
+
+
+
