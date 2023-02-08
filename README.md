@@ -47,22 +47,22 @@ Let's look at the correlation each factor has with price.
 
 ![Heatmap of correlations](./Photos/heatmap.png)
 
-__Correlations with Price__
-price            1.000000
-sqft_living      0.608521
-sqft_above       0.538651
-bathrooms        0.480401
-sqft_patio       0.313409
-bedrooms         0.289204
-sqft_garage      0.264169
-sqft_basement    0.245058
-floors           0.180576
-yr_built         0.096013
-sqft_lot         0.085730
-yr_renovated     0.084786
-lat              0.063632
-long            -0.022509
-id              -0.034184
+__Correlations with Price Highest to Lowest__ \
+price            1.000000 \
+sqft_living      0.608521 \
+sqft_above       0.538651 \
+bathrooms        0.480401 \
+sqft_patio       0.313409 \
+bedrooms         0.289204 \
+sqft_garage      0.264169 \
+sqft_basement    0.245058 \
+floors           0.180576 \
+yr_built         0.096013 \
+sqft_lot         0.085730 \
+yr_renovated     0.084786 \
+lat              0.063632 \
+long            -0.022509 \
+id              -0.034184 
 
 Looking at the correlations above I see two things:
 * The heatmap shows that square footage of living space and above grade square footage are strongly correlated with each other. This makes sense; it follows that the more above grade square footage, the more square footage of living space. In order to avoid multicollinearity, only one of these factors should be used. Square footage of living space has a higher correlation than above grade square footage. So when looking at square footage, I will use this one as one of the predictors.  
