@@ -77,4 +77,23 @@ Three of the six factors we are considering are numeric: square footage, bedroom
 
 ![scatterplots of numerical factors with price](./Photos/Numerical_factors_scatter.png)
 
-Just by looking at the graphs, it seems that square footage of living space, bedrooms, and bathrooms have positive correlations. Though bedrooms looks a little weaker. This is consistent with what the heatmap showed previously.
+Just by looking at the graphs, it seems that square footage of living space, bedrooms, and bathrooms have positive correlations. Though bedrooms looks a little weaker. This is consistent with what the heatmap showed previously. Let's look at the linear regression model. 
+
+![Linear Regressionn model 2](./Photos/Model_2_results.png)
+
+##### Interpretation
+The model is significant overall. The model explains ~39% of the variance in price. The constant and coefficients are all significant. 
+
+The constant shows a starting value of 201k USD. For King County, this seems reasonable. 
+
+The model shows that for every additional sqare foot in living area, the price goes up by about 616 USD all else constant. 
+
+Adding bedrooms brings down the price of the house by about -162K per bedroom, all else constant. 
+
+For each bathroom the house price goes up by about 68k per bathroom, all else constant. 
+
+Overall, the model seems weak with only explaining 39% of variance in price.
+
+
+
+
