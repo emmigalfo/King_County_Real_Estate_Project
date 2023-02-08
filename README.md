@@ -47,7 +47,24 @@ Let's look at the correlation each factor has with price.
 
 ![Heatmap of correlations](./Photos/heatmap.png)
 
-Using the correlations above I see two things:
+__Correlations with Price__
+price            1.000000
+sqft_living      0.608521
+sqft_above       0.538651
+bathrooms        0.480401
+sqft_patio       0.313409
+bedrooms         0.289204
+sqft_garage      0.264169
+sqft_basement    0.245058
+floors           0.180576
+yr_built         0.096013
+sqft_lot         0.085730
+yr_renovated     0.084786
+lat              0.063632
+long            -0.022509
+id              -0.034184
+
+Looking at the correlations above I see two things:
 * The heatmap shows that square footage of living space and above grade square footage are strongly correlated with each other. This makes sense; it follows that the more above grade square footage, the more square footage of living space. In order to avoid multicollinearity, only one of these factors should be used. Square footage of living space has a higher correlation than above grade square footage. So when looking at square footage, I will use this one as one of the predictors.  
 * Of the factors that the clients are intersted in looking at, square footage of living space has the highest correlation with price. This is a good place to start for the baseline model. 
 
@@ -94,6 +111,47 @@ For each bathroom the house price goes up by about 68k per bathroom, all else co
 
 Overall, the model seems weak with only explaining 39% of variance in price.
 
+## Third Model: Square Footage, Bedrooms, Bathrooms, Grade, View, Condition
+The categorical data we will be looking at includes grade, condition, and views. 
+Let's look at each variable and the descriptions from the data base. 
+
+### Grade
+Represents the construction quality of improvements. Grades run from grade 1 to 13. Generally defined as:
+
+1-3 Falls short of minimum building standards. Normally cabin or inferior structure.
+
+4 Generally older, low quality construction. Does not meet code.
+
+5 Low construction costs and workmanship. Small, simple design.
+
+6 Lowest grade currently meeting building code. Low quality materials and simple designs.
+
+7 Average grade of construction and design. Commonly seen in plats and older sub-divisions.
+
+8 Just above average in construction and design. Usually better materials in both the exterior and interior finish work.
+
+9 Better architectural design with extra interior and exterior design and quality.
+
+10 Homes of this quality generally have high quality features. Finish work is better and more design quality is seen in the floor plans. Generally have a larger square footage.
+
+11 Custom design and higher quality finish work with added amenities of solid woods, bathroom fixtures and more luxurious options.
+
+12 Custom design and excellent builders. All materials are of the highest quality and all conveniences are present.
+
+13 Generally custom designed and built. Mansion level. Large amount of highest quality cabinet work, wood trim, marble, entry ways etc.
 
 
-
+__mean prices by grade__
+13 Mansion       7.399048e+06
+12 Luxury        5.088029e+06
+11 Excellent     3.542308e+06
+10 Very Good     2.341987e+06
+9 Better         1.586307e+06
+1 Cabin          1.352500e+06
+8 Good           1.083520e+06
+7 Average        8.201276e+05
+6 Low Average    6.539746e+05
+4 Low            6.388057e+05
+5 Fair           6.186138e+05
+3 Poor           4.644615e+05
+2 Substandard    3.025000e+05
