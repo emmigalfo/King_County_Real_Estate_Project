@@ -79,7 +79,7 @@ Three of the six factors we are considering are numeric: square footage, bedroom
 
 Just by looking at the graphs, it seems that square footage of living space, bedrooms, and bathrooms have positive correlations. Though bedrooms looks a little weaker. This is consistent with what the heatmap showed previously. Let's look at the linear regression model. 
 
-![Linear Regressionn model 2](./Photos/Model_2_results.png)
+![Linear Regression model 2](./Photos/Model_2_results.png)
 
 ##### Interpretation
 The model is significant overall. The model explains ~39% of the variance in price. The constant and coefficients are all significant. 
