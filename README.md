@@ -46,3 +46,28 @@ The target variable for this project is __price__. The clients want to know how 
 Let's look at the correlation each factor has with price. 
 
 ![Heatmap of correlations](./Photos/heatmap.png)
+
+![list of correlations with price](./Photos/Pricecorrelations.png)
+
+Using the correlations above I see two things:
+* The heatmap shows that square footage of living space and above grade square footage are strongly correlated with each other. This makes sense; it follows that the more above grade square footage, the more square footage of living space. In order to avoid multicollinearity, only one of these factors should be used. Square footage of living space has a higher correlation than above grade square footage. So when looking at square footage, I will use this one as one of the predictors.  
+* Of the factors that the clients are intersted in looking at, square footage of living space has the highest correlation with price. This is a good place to start for the baseline model. 
+
+### Predictors: 
+The predictors that the clients are most intersted in are __square footage of living area, number of bathrooms, number of bedrooms, condition of the home, grade of the home, and quality of views__. 
+
+## Baseline Model: Square Footage
+
+I will use square footage of living space as my factor for my baseline model because it is relevent to the business problem and has the highest correlation with the target variable, price. 
+
+![baseline model 1](./Photos/Model_1_results.png)
+##### Interpretation
+The model is significant overall. The model explains 37% of the variance in price. 
+The constant and coefficient are both significant. 
+
+The constant is a bit non-sensical at this point stating that a home with no square footage would cost -74k USD. 
+
+The model shows that for every square foot in living area, the price goes up by about 560 USD. 
+This may seem expensive but it is consistent with a mean square footage of 2,112 and a mean price of 1.1 million USD.
+
+Overall, I don't think this is a very good model because it only explains 37% of the variance.
