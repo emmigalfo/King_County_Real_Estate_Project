@@ -71,3 +71,12 @@ The model shows that for every square foot in living area, the price goes up by 
 This may seem expensive but it is consistent with a mean square footage of 2,112 and a mean price of 1.1 million USD.
 
 Overall, I don't think this is a very good model because it only explains 37% of the variance.
+
+## Second Model: Square Footage, Bedrooms, Bathrooms
+
+### Adding additional numerical factors: 
+Three of the six factors we are considering are numeric: square footage, bedrooms, and bathrooms. 
+
+![scatterplots of numerical factors with price](./Photos/Numerical_factors_scatter.png)
+
+Just by looking at the graphs, it seems that square footage of living space, bedrooms, and bathrooms have positive correlations. Though bedrooms looks a little weaker. This is consistent with what the heatmap showed previously.
