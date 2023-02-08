@@ -247,7 +247,7 @@ __Results and Interpretation:__
 
 ## Conclusions
 
-According to the model, the real estate agent should help the couple look for a house with more bedrooms and fewer bathrooms. Depending on what they are comfortable with, a lower grade house in better condition could save more money than a higher grade house. Views can be expensive, but going for a good view is only a little more in cost than an average view and a lot cheaper than an excellent view. Of course, this is only the trend the model is seeing and the model is only explaining about 51% of the variation in price. Given that the model has a relatively high mean absolute error, 301K, the model should only be used as a loose guide to help the couple with their expectations on home prices. 
+According to the model, the real estate agent should help the couple look for a house with more bedrooms and fewer bathrooms. Depending on what they are comfortable with, a lower grade house in better condition could save more money than a higher grade house. Views can be expensive, but going for a good view is only a little more in cost than an average view and a lot cheaper than an excellent view. Of course, this is only the trend the model is seeing, and the model is only explaining about 51% of the variation in price. Given that the model has a relatively high mean absolute error, 301K, and not a very high R-squared value, the model should only be used as a loose guide to help the couple with their expectations on home prices. 
 
 Next steps should be to look at other variables such as zipcodes to see how they affect housing prices.  Ideally, an increase in model accuracy is needed before the model can produce solid recommendations. 
 
