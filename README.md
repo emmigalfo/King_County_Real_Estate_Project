@@ -47,8 +47,6 @@ Let's look at the correlation each factor has with price.
 
 ![Heatmap of correlations](./Photos/heatmap.png)
 
-![list of correlations with price](./Photos/Pricecorrelations.png)
-
 Using the correlations above I see two things:
 * The heatmap shows that square footage of living space and above grade square footage are strongly correlated with each other. This makes sense; it follows that the more above grade square footage, the more square footage of living space. In order to avoid multicollinearity, only one of these factors should be used. Square footage of living space has a higher correlation than above grade square footage. So when looking at square footage, I will use this one as one of the predictors.  
 * Of the factors that the clients are intersted in looking at, square footage of living space has the highest correlation with price. This is a good place to start for the baseline model. 
