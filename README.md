@@ -142,7 +142,7 @@ Represents the construction quality of improvements. Grades run from grade 1 to 
 13 Generally custom designed and built. Mansion level. Large amount of highest quality cabinet work, wood trim, marble, entry ways etc.
 
 
->__Grade Mean Prices from Highest to Lowest:__ \
+>__Grade Mean Prices from Highest to Lowest:__ 
  13 Mansion-       7.399048e+06 \
  12 Luxury-        5.088029e+06 \
  11 Excellent-     3.542308e+06 \
@@ -156,6 +156,8 @@ Represents the construction quality of improvements. Grades run from grade 1 to 
  5 Fair-           6.186138e+05 \
  3 Poor-           4.644615e+05 \
  2 Substandard-    3.025000e+05 
+ 
+ ![Bargraph of Grade](./Photos/Grade_Price.png)
 
 *A note for modeling: one column needs to be dropped to avoid the dummy trap. I will drop cabin as it's one of the most inferior grades and is most likely not what the clients would be looking for. When it's dropped, cabin will become the reference column when looking at grade.*
 
@@ -173,12 +175,14 @@ Relative to age and grade. Coded 1-5.
 
 5= Very Good- All items well maintained, many having been overhauled and repaired as they have shown signs of wear, increasing the life expectancy and lowering the effective age with little deterioration or obsolescence evident with a high degree of utility.
 
-> __Condition Mean Prices from Highest to Lowest:__ \
+> __Condition Mean Prices from Highest to Lowest:__ 
 Average-      1.134336e+06 \
 Very Good-    1.130726e+06 \
 Good-         1.053242e+06 \
 Fair-         7.799337e+05 \
 Poor-         6.482829e+05 
+
+![Bargraph of Condition](./Photos/Condition_Price.png)
 
 *Again, a column will need to be dropped in order to avoid multicollinearity. The column that makes the most sense to be dropped is the poor condition because our clients will not be interested in these homes. In the model, poor condition will be the reference column.* 
 
@@ -187,12 +191,14 @@ __Description:__ \
 Quality of view from house
 Includes views of Mt. Rainier, Olympics, Cascades, Territorial, Seattle Skyline, Puget Sound, Lake Washington, Lake Sammamish, small lake / river / creek, and other
 
-> __View Mean Prices from Highest to Lowest:__ \ 
+> __View Mean Prices from Highest to Lowest:__  
 Excellent-    2.994147e+06 \
 Fair-         1.742069e+06 \
 Good-         1.736416e+06 \
 Average-      1.451993e+06 \
 None-         1.018607e+06 
+
+![Bargraph of Views](./Photos/View_Price.png)
 
 *The view column, none, will be dropped to avoid the dummy trap. The column, none, will become the reference for view.*
 
