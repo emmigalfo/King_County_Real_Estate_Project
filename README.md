@@ -258,5 +258,10 @@ According to the model, the real estate agent should help the couple look for a 
 
 Next steps should be to look at other variables such as zipcodes to see how they affect housing prices.  Ideally, an increase in model accuracy is needed before the model can produce solid recommendations. 
 
+***
+Thank You!
+emmi.galfo@gmail.com
+
+***
 
 
