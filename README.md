@@ -17,6 +17,7 @@ A real estate agent is helping a couple find a house in King County. In order to
 *  Number of Bedrooms
 *  Number of Bathrooms
 *  House Condition 
+*  House Grade
 *  Quality of the View
 
 ## Data Understanding
