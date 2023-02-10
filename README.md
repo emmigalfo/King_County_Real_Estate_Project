@@ -264,4 +264,9 @@ emmi.galfo@gmail.com
 
 ***
 
-
+Repository structure: \
+├── data : data used in project \
+├── photos : images used in readme and notebook \
+├── King_County_Real_Estate.ipynb : jupyter notebook used to create project \
+├── README.md : project summary and conclusions \
+├── presentation.pdf : stakeholder powerpoint slides 
