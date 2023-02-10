@@ -261,10 +261,9 @@ Next steps should be to look at other variables such as zipcodes to see how they
 ***
 Thank You!
 emmi.galfo@gmail.com
-
 ***
 
-Repository structure: \
+## Repository structure: 
 ├── data : data used in project \
 ├── photos : images used in readme and notebook \
 ├── King_County_Real_Estate.ipynb : jupyter notebook used to create project \
